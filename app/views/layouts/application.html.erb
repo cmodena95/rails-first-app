@@ -10,6 +10,14 @@
   </head>
 
   <body>
+    <%= link_to "Home", root_path %>
     <%= yield %>
+
+
+    <form action="/contact" method="get">
+      <input type="text" name="member" value="<%= params[:member] %>" placeholder="Who are you looking for?">
+      <input type="text" name="hello" placeholder="Type something">
+      <input type="submit">
+    </form>
   </body>
 </html>
